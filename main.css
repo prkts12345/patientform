@@ -1,0 +1,26 @@
+* {
+    margin: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: silver;
+}
+
+#address {
+    width: 64vw;
+}
+
+.checkboxes {
+    display: block;
+    font-size: 20px;
+    text-align: center
+}
+
+.question {
+    float: right;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class ="container">
+        <form class = "contact" action = "" method="post">
+            <h3>Patient Form</h3>
+
+            <label for ="fname" name="fname">First Name:</label>
+            <input type = "text" name="fname" required>
+            <label for ="middlename" name ="middlename">Middle Name:</label>
+            <input type = "text" name ="middlename" required>
+            <label for ="lname" name="lname">Last Name:</label>
+            <input type ="text" name="lname" required><br><br>
+
+            <label for ="address" name="address" id="address">Address:</label>
+            <input type ="text" name="address" id="address" required><br><br>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2021-11-17" required>
+            <label for="phone">Mobile number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="eg. 0917-000-0000" required>
+            
+            <label for ="gender" name="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" onclick=(genderSelected)>
+            <label for="gender">MALE</label>
+            <input type="radio" id="female" name="gender" value="female" onclick=(genderSelected)>
+            <label for="gender">FEMALE</label>
+              
+        
+
+        <fieldset>
+            <legend>
+                Medical History
+            </legend>
+
+             <div class="checkboxes">
+                <!-- <input type="checkbox" onclick="toggle(this)" />Select All -->
+                <label><input type="checkbox" name="symptoms" value="asthma">Asthma</label>
+                <label><input type="checkbox" name="symptoms" value="caridac">Cardiac Disease</label>
+                <label><input type="checkbox" name="symptoms" value="diabetes">Diabetes</label>
+                <label><input type="checkbox" name="symptoms" value="hypertension">Hypertension</label>
+                <label><input type="checkbox" name="symptoms" value="pyschiatric">Pyschiatric Disorder</label><br>
+                <label><input type="checkbox" name="symptoms" value="epilpesy">Epilepsy</label>
+                <label><input type="checkbox" name="symptoms" value="cancer">Cancer</label>
+                <label><input type="checkbox" name="others" value="others">Other:</label>
+                <label><input type="text" name="others" placeholder="Other" required></label>
+            </div>
+
+        </fieldset><br>
+
+        
+        <label for="disease">Current Symptoms:</label><br>
+        <select name="disease" id="disease" multiple>
+          <option value="chestpain">Chest Pain</option>
+          <option value="respiratory">Respiratory</option>
+          <option value="hematological">Hematological</option>
+          <option value="lymphatic">Lymphatic</option>
+          <option value="neurological">Neurological</option>
+          <option value="psyciatric">Psyciatric</option>
+          <option value="gastrointestinal">Gastrointestinal</option>
+          <option value="Weight Loss">Weight Loss</option>
+        </select>
+        
+        <div class="question">
+        <label>Are you currently taking medication this past 5days?</label><br>
+        <input type ="radio" name="choice" id="choice-yes" value="yes" onclick="yes()">
+        <label for="question">Yes</label>
+        <input type ="radio" name="choice" id="choice-no" value="no" onclick="no()">
+        <label for="question" >No</label>
+        <input type ="text" name="choice" id="yesno" placeholder="If yes, What kind of Medical?" disabled><br>
+    </div>
+    <br><br><br><br><br><br><br>
+
+
+      <input type="submit" value="Submit">
+      <button>Reset</button>
+    </div>
+</form>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

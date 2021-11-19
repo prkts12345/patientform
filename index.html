@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.form1 {
+    display: inline-block;
+    background-color: silver;
+}
+
+input [type="submit"] {
+    background-color: darkgray;
+}
+    </style>
+</head>
+<body>
+
+    <div class='form1'>
+        <form name='logForm' method="get" action="patientform.html" onsubmit="return validateForm()">
+            <h1>Log-in</h1>
+            <label for="username" >Username:</label>
+            <input type="text" name="username" required><br>
+            <label for="password" >Password:</label>
+            <input type="password" name="password" required><br>
+            <input type="submit">
+        </form>
+    </div>
+
+
+    <script>
+        function validateForm() {
+    var logForm = document.forms["logForm"];
+    var userName = logform["username"].value;
+    var passWord = logform["password"].value;
+    
+    if (userName !== "userName") {
+                alert('Please provide username!');
+                logForm["userame"].focus();
+                return false;
+    }
+
+    if (passWord !== "passWord") {
+                alert('Please provide password!');
+                logForm["password"].focus();
+                return false;
+    }
+
+}
+    </script>
+</body>
+</html>
